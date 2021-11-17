@@ -8,6 +8,7 @@
     <title>Bananaaa</title>
     <style>
         textarea {
+         
             height: 50px;
             width: 300px;
             margin: 10px;
@@ -15,18 +16,26 @@
             padding: 10px;
         }
 
-        button {
+        #btn-translate{
+            border-radius: 3rem;
+        }
 
-            border-radius: 1rem;
-
+        #output{
+            border:3px solid black;
+            height: 50px;
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
         }
     </style>
 </head>
 
 <body>
     <h1>Banana Speak</h1>
-    <textarea  placeholder="write here something,we will convert it into ---" id="text-input"></textarea>
+    <textarea  placeholder="write here something,we will convert it into Vanila.js---" id="text-input"></textarea>
     <button id="btn-translate">Translate</button>
+    <div style="font-size: large;">Output will come here  👇</div>
+    <div id="output"></div>
     <script src="app.js" type="text/javascript"></script>
 </body>
 
