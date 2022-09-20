@@ -16,15 +16,14 @@ function clickHandler() {
   var inputText = textinput.value;
   if (inputText === "") {
     alert("Please enter the Text ");
-  } else {
-    fetch(getServerURL(inputText))
-      .then((response) => response.json())
-      .then((json) => {
-        var translatedText = json.contents.translated;
-        outputdiv.innerText = translatedText;
-      })
-      .catch(errorHandler);
   }
+  fetch(getServerURL(inputText))
+    .then((response) => response.json())
+    .then((json) => {
+      var translatedText = json.contents.translated;
+      outputdiv.innerText = translatedText;
+    })
+    .catch(errorHandler);
 }
 
 btnTranslate.addEventListener("click", clickHandler);
